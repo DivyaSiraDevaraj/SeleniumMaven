@@ -49,10 +49,18 @@ public class HomePageTest extends TestBase {
 
     }
 
-@AfterMethod
-    public void tearDown(){
+    @Test(priority=4)
 
-        driver.quit();
+    public void verifyClickOnProductImageTest(){
+        productPage = homePage.clickOnProductImage();
+
+
+    }
+
+@AfterMethod
+  public void tearDown(){
+
+       driver.quit();
 }
 
 }

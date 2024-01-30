@@ -11,8 +11,17 @@ public class HomePage extends TestBase {
     @CacheLookup
     WebElement userNameLabel;
 
-    @FindBy(xpath ="//*[@id=\"inventory_container\"]/div/div[1]/div[2]")
+    //@FindBy(xpath ="//*[@id=\"inventory_container\"]/div/div[1]/div[2]")
+    //WebElement productLink;
+
+
+    @FindBy(xpath ="//*[@id=\"item_4_title_link\"]/div")
     WebElement productLink;
+
+    @FindBy(xpath ="//*[@id=\"item_4_img_link\"]/img")
+    WebElement productImage;
+
+
 
     public HomePage() {
         PageFactory.initElements(driver, this);
@@ -32,6 +41,13 @@ public class HomePage extends TestBase {
         productLink.click();
         return new ProductPage();
     }
+
+    public ProductPage clickOnProductImage()
+    {
+        productImage.click();
+        return new ProductPage();
+    }
+
 
 
 
